@@ -103,4 +103,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (menuClose) menuClose.addEventListener('click', closeMenu);
   if (menuOverlay) menuOverlay.addEventListener('click', closeMenu);
+
+  // Логіка копіювання номеру телефону на ПК
+  const copyPhones = document.querySelectorAll('.copy-phone');
+  copyPhones.forEach(phoneElem => {
+    phoneElem.addEventListener('click', () => {
+      const number = phoneElem.dataset.phone;
+      if (number) {
+        navigator.clipboard.writeText(number).then(() => {
+          const originalHTML = phoneElem.innerHTML;
+          // Показуємо іконку галочки і текст "Скопійовано!"
+          phoneElem.innerHTML = '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px; margin-right:4px;"><polyline points="20 6 9 17 4 12"></polyline></svg>Скопійовано!';
+          phoneElem.style.color = '#4ade80'; // Легкий зелений відтінок
+          setTimeout(() => {
+            phoneElem.innerHTML = originalHTML;
+            phoneElem.style.color = '';
+          }, 2000);
+        }).catch(err => console.error('Помилка копіювання: ', err));
+      }
+    });
+  });
 });
