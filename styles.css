@@ -96,16 +96,6 @@ img{max-width:100%;display:block}
   opacity: 0.8;
 }
 
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:8px 12px;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:999px;
-  background:rgba(255,255,255,.04);
-}
-
 header.site-header{
   position:absolute;
   top:46px;
@@ -772,6 +762,7 @@ textarea{min-height:140px;resize:vertical}
     display: grid;
     place-items: center;
   }
+
   .search-results {
     width: 100%;
     top: calc(100% + 4px);
