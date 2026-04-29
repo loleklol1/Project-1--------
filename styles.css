@@ -679,9 +679,27 @@ textarea{min-height:140px;resize:vertical}
 
   .mobile-controls {
     display: flex;
+    align-items: center;
+    gap: 12px; /* Відступ між номером телефону та кнопкою меню */
     margin-left: auto;
   }
   
+  /* Стилі для номера телефону у верхній панелі на телефоні */
+  .mobile-phone-link {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    text-decoration: none;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Красива тінь */
+    transition: transform 0.2s ease, opacity 0.2s ease, color 0.2s ease;
+  }
+  .mobile-phone-link:hover {
+    color: #e0e0e0;
+    opacity: 0.9;
+    transform: translateY(-1px); /* Анімація при кліку/наведенні */
+  }
+
   .menu-toggle {
     display: grid;
     background: rgba(255, 255, 255, 0.15);
@@ -762,7 +780,6 @@ textarea{min-height:140px;resize:vertical}
     display: grid;
     place-items: center;
   }
-
   .search-results {
     width: 100%;
     top: calc(100% + 4px);
