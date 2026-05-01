@@ -680,7 +680,7 @@ textarea{min-height:140px;resize:vertical}
   .mobile-controls {
     display: flex;
     align-items: center;
-    gap: 12px; /* Відступ між номером телефону та кнопкою меню */
+    gap: 12px; 
     margin-left: auto;
   }
   
@@ -690,9 +690,12 @@ textarea{min-height:140px;resize:vertical}
     display: flex;
     align-items: center;
     font-size: 1rem;
+    margin-left: 0;
+    padding-left: 0;
     text-decoration: none;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Красива тінь */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); 
     transition: transform 0.2s ease, opacity 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
   }
   .mobile-phone-link:hover {
     color: #e0e0e0;
